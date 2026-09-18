@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "demo-directory",
+  "environment": "demo",
+  "sequence": 1,
+  "publishedAt": "2026-09-18T04:35:22.130Z",
+  "expiresAt": "2026-10-18T04:35:22.130Z",
+  "brands": [
+    {
+      "id": "brand-01",
+      "name": "演示品牌 01",
+      "category": "日用家居",
+      "description": "杯壶与日用收纳"
+    },
+    {
+      "id": "brand-02",
+      "name": "演示品牌 02",
+      "category": "个人护理",
+      "description": "洗护与清洁用品"
+    },
+    {
+      "id": "brand-03",
+      "name": "演示品牌 03",
+      "category": "数码配件",
+      "description": "键盘与桌面配件"
+    },
+    {
+      "id": "brand-04",
+      "name": "演示品牌 04",
+      "category": "日用家居",
+      "description": "居家清洁与厨房用品"
+    },
+    {
+      "id": "brand-05",
+      "name": "演示品牌 05",
+      "category": "个人护理",
+      "description": "个人护理与生活纸品"
+    },
+    {
+      "id": "brand-06",
+      "name": "演示品牌 06",
+      "category": "数码配件",
+      "description": "充电配件与线材"
+    },
+    {
+      "id": "brand-07",
+      "name": "演示品牌 07",
+      "category": "日用家居",
+      "description": "家用纺织与织物"
+    },
+    {
+      "id": "brand-08",
+      "name": "演示品牌 08",
+      "category": "个人护理",
+      "description": "衣物护理与清洁用品"
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity-01",
+      "name": "演示经营主体 01（虚构）"
+    },
+    {
+      "id": "entity-02",
+      "name": "演示经营主体 02（虚构）"
+    },
+    {
+      "id": "entity-03",
+      "name": "演示经营主体 03（虚构）"
+    },
+    {
+      "id": "entity-04",
+      "name": "演示经营主体 04（虚构）"
+    },
+    {
+      "id": "entity-05",
+      "name": "演示经营主体 05（虚构）"
+    },
+    {
+      "id": "entity-06",
+      "name": "演示经营主体 06（虚构）"
+    },
+    {
+      "id": "entity-07",
+      "name": "演示经营主体 07（虚构）"
+    },
+    {
+      "id": "entity-08",
+      "name": "演示经营主体 08（虚构）"
+    }
+  ],
+  "sites": [
+    {
+      "id": "brand-01-office",
+      "entityId": "entity-01",
+      "name": "杭州办公室（演示）",
+      "type": "office",
+      "city": "杭州",
+      "address": "杭州市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-01-factory",
+      "entityId": "entity-01",
+      "name": "宁波一号工厂（演示）",
+      "type": "factory",
+      "city": "宁波",
+      "address": "宁波市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-02-office",
+      "entityId": "entity-02",
+      "name": "上海办公室（演示）",
+      "type": "office",
+      "city": "上海",
+      "address": "上海市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-02-factory",
+      "entityId": "entity-02",
+      "name": "苏州一号工厂（演示）",
+      "type": "factory",
+      "city": "苏州",
+      "address": "苏州市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-03-office",
+      "entityId": "entity-03",
+      "name": "深圳办公室（演示）",
+      "type": "office",
+      "city": "深圳",
+      "address": "深圳市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-03-factory",
+      "entityId": "entity-03",
+      "name": "东莞一号工厂（演示）",
+      "type": "factory",
+      "city": "东莞",
+      "address": "东莞市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-04-office",
+      "entityId": "entity-04",
+      "name": "成都办公室（演示）",
+      "type": "office",
+      "city": "成都",
+      "address": "成都市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-04-factory",
+      "entityId": "entity-04",
+      "name": "绵阳一号工厂（演示）",
+      "type": "factory",
+      "city": "绵阳",
+      "address": "绵阳市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-05-office",
+      "entityId": "entity-05",
+      "name": "广州办公室（演示）",
+      "type": "office",
+      "city": "广州",
+      "address": "广州市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-05-factory",
+      "entityId": "entity-05",
+      "name": "佛山一号工厂（演示）",
+      "type": "factory",
+      "city": "佛山",
+      "address": "佛山市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-06-office",
+      "entityId": "entity-06",
+      "name": "南京办公室（演示）",
+      "type": "office",
+      "city": "南京",
+      "address": "南京市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-06-factory",
+      "entityId": "entity-06",
+      "name": "无锡一号工厂（演示）",
+      "type": "factory",
+      "city": "无锡",
+      "address": "无锡市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-07-office",
+      "entityId": "entity-07",
+      "name": "合肥办公室（演示）",
+      "type": "office",
+      "city": "合肥",
+      "address": "合肥市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-07-factory",
+      "entityId": "entity-07",
+      "name": "芜湖一号工厂（演示）",
+      "type": "factory",
+      "city": "芜湖",
+      "address": "芜湖市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-08-office",
+      "entityId": "entity-08",
+      "name": "厦门办公室（演示）",
+      "type": "office",
+      "city": "厦门",
+      "address": "厦门市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "brand-08-factory",
+      "entityId": "entity-08",
+      "name": "泉州一号工厂（演示）",
+      "type": "factory",
+      "city": "泉州",
+      "address": "泉州市 · 演示地址，不对应真实地点"
+    },
+    {
+      "id": "shared-factory",
+      "entityId": "entity-03",
+      "name": "协作二号工厂（演示）",
+      "type": "factory",
+      "city": "嘉兴",
+      "address": "嘉兴市 · 演示地址，不对应真实地点"
+    }
+  ],
+  "brandSites": [
+    {
+      "brandId": "brand-01",
+      "siteId": "brand-01-office",
+      "relation": "operator",
+      "productScope": "杯壶与日用收纳",
+      "evidenceIds": [
+        "evidence-01"
+      ]
+    },
+    {
+      "brandId": "brand-01",
+      "siteId": "brand-01-factory",
+      "relation": "owned",
+      "productScope": "杯壶与日用收纳",
+      "evidenceIds": [
+        "evidence-01"
+      ]
+    },
+    {
+      "brandId": "brand-02",
+      "siteId": "brand-02-office",
+      "relation": "operator",
+      "productScope": "洗护与清洁用品",
+      "evidenceIds": [
+        "evidence-02"
+      ]
+    },
+    {
+      "brandId": "brand-02",
+      "siteId": "brand-02-factory",
+      "relation": "owned",
+      "productScope": "洗护与清洁用品",
+      "evidenceIds": [
+        "evidence-02"
+      ]
+    },
+    {
+      "brandId": "brand-03",
+      "siteId": "brand-03-office",
+      "relation": "operator",
+      "productScope": "键盘与桌面配件",
+      "evidenceIds": [
+        "evidence-03"
+      ]
+    },
+    {
+      "brandId": "brand-03",
+      "siteId": "brand-03-factory",
+      "relation": "owned",
+      "productScope": "键盘与桌面配件",
+      "evidenceIds": [
+        "evidence-03"
+      ]
+    },
+    {
+      "brandId": "brand-04",
+      "siteId": "brand-04-office",
+      "relation": "operator",
+      "productScope": "居家清洁与厨房用品",
+      "evidenceIds": [
+        "evidence-04"
+      ]
+    },
+    {
+      "brandId": "brand-04",
+      "siteId": "brand-04-factory",
+      "relation": "owned",
+      "productScope": "居家清洁与厨房用品",
+      "evidenceIds": [
+        "evidence-04"
+      ]
+    },
+    {
+      "brandId": "brand-05",
+      "siteId": "brand-05-office",
+      "relation": "operator",
+      "productScope": "个人护理与生活纸品",
+      "evidenceIds": [
+        "evidence-05"
+      ]
+    },
+    {
+      "brandId": "brand-05",
+      "siteId": "brand-05-factory",
+      "relation": "owned",
+      "productScope": "个人护理与生活纸品",
+      "evidenceIds": [
+        "evidence-05"
+      ]
+    },
+    {
+      "brandId": "brand-06",
+      "siteId": "brand-06-office",
+      "relation": "operator",
+      "productScope": "充电配件与线材",
+      "evidenceIds": [
+        "evidence-06"
+      ]
+    },
+    {
+      "brandId": "brand-06",
+      "siteId": "brand-06-factory",
+      "relation": "owned",
+      "productScope": "充电配件与线材",
+      "evidenceIds": [
+        "evidence-06"
+      ]
+    },
+    {
+      "brandId": "brand-07",
+      "siteId": "brand-07-office",
+      "relation": "operator",
+      "productScope": "家用纺织与织物",
+      "evidenceIds": [
+        "evidence-07"
+      ]
+    },
+    {
+      "brandId": "brand-07",
+      "siteId": "brand-07-factory",
+      "relation": "owned",
+      "productScope": "家用纺织与织物",
+      "evidenceIds": [
+        "evidence-07"
+      ]
+    },
+    {
+      "brandId": "brand-08",
+      "siteId": "brand-08-office",
+      "relation": "operator",
+      "productScope": "衣物护理与清洁用品",
+      "evidenceIds": [
+        "evidence-08"
+      ]
+    },
+    {
+      "brandId": "brand-08",
+      "siteId": "brand-08-factory",
+      "relation": "owned",
+      "productScope": "衣物护理与清洁用品",
+      "evidenceIds": [
+        "evidence-08"
+      ]
+    },
+    {
+      "brandId": "brand-01",
+      "siteId": "shared-factory",
+      "relation": "supplier",
+      "productScope": "部分产品委托生产，具体批次待核实",
+      "evidenceIds": [
+        "evidence-03"
+      ]
+    },
+    {
+      "brandId": "brand-03",
+      "siteId": "shared-factory",
+      "relation": "supplier",
+      "productScope": "部分产品委托生产，具体批次待核实",
+      "evidenceIds": [
+        "evidence-03"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "brand-01-office-obs",
+      "siteId": "brand-01-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-01"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-01-factory-obs",
+      "siteId": "brand-01-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-01"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-02-office-obs",
+      "siteId": "brand-02-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "recruitment",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-02"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-02-factory-obs",
+      "siteId": "brand-02-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "two_days",
+      "statementType": "recruitment",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-02"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-03-office-obs",
+      "siteId": "brand-03-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-03"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-03-factory-obs",
+      "siteId": "brand-03-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "shift",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-03"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-04-office-obs",
+      "siteId": "brand-04-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "recruitment",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-04"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-04-factory-obs",
+      "siteId": "brand-04-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "recruitment",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-04"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-05-office-obs",
+      "siteId": "brand-05-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "two_days",
+      "statementType": "experience",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-05"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-05-factory-obs",
+      "siteId": "brand-05-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "single",
+      "statementType": "experience",
+      "verification": "disputed",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-05"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-06-office-obs",
+      "siteId": "brand-06-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "unknown",
+      "statementType": "policy",
+      "verification": "unverified",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-06"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-06-factory-obs",
+      "siteId": "brand-06-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-06"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-07-office-obs",
+      "siteId": "brand-07-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-07"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-08-office-obs",
+      "siteId": "brand-08-office",
+      "role": "行政与财务",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2025-09-18",
+      "periodEnd": "2025-09-18",
+      "evidenceIds": [
+        "evidence-08"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "brand-08-factory-obs",
+      "siteId": "brand-08-factory",
+      "role": "生产操作岗",
+      "employmentType": "direct",
+      "schedule": "weekend",
+      "statementType": "policy",
+      "verification": "public_source",
+      "periodStart": "2025-09-18",
+      "periodEnd": "2025-09-18",
+      "evidenceIds": [
+        "evidence-08"
+      ],
+      "note": "演示记录，仅覆盖列明岗位；其他岗位、劳务派遣与外包人员安排未知。"
+    },
+    {
+      "id": "shared-obs",
+      "siteId": "shared-factory",
+      "role": "包装岗",
+      "employmentType": "dispatch",
+      "schedule": "alternating",
+      "statementType": "recruitment",
+      "verification": "public_source",
+      "periodStart": "2026-08-19",
+      "periodEnd": "2026-09-18",
+      "evidenceIds": [
+        "evidence-03"
+      ],
+      "note": "演示：同一工厂服务多个品牌，岗位安排不继承品牌总部制度。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-01",
+      "type": "demo",
+      "title": "演示作息资料 01（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-02",
+      "type": "demo",
+      "title": "演示作息资料 02（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-03",
+      "type": "demo",
+      "title": "演示作息资料 03（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-04",
+      "type": "demo",
+      "title": "演示作息资料 04（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-05",
+      "type": "demo",
+      "title": "演示作息资料 05（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-06",
+      "type": "demo",
+      "title": "演示作息资料 06（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-07",
+      "type": "demo",
+      "title": "演示作息资料 07（非真实证据）",
+      "publishedAt": "2026-08-19",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    },
+    {
+      "id": "evidence-08",
+      "type": "demo",
+      "title": "演示作息资料 08（非真实证据）",
+      "publishedAt": "2025-09-18",
+      "reviewedAt": "2026-09-18",
+      "excerpt": "仅用于验证地点、岗位、期间和证据展示。全部名称、制度和经营关系均为虚构。"
+    }
+  ],
+  "shoppingLinks": [
+    {
+      "id": "brand-01-jd",
+      "brandId": "brand-01",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E6%9D%AF%E5%A3%B6",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-02-jd",
+      "brandId": "brand-02",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E6%B4%97%E6%8A%A4",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-03-jd",
+      "brandId": "brand-03",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E9%94%AE%E7%9B%98",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-04-jd",
+      "brandId": "brand-04",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E5%B1%85%E5%AE%B6%E6%B8%85%E6%B4%81",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-05-jd",
+      "brandId": "brand-05",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E4%B8%AA%E4%BA%BA%E6%8A%A4%E7%90%86",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-06-jd",
+      "brandId": "brand-06",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E5%85%85%E7%94%B5%E9%85%8D%E4%BB%B6",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-07-jd",
+      "brandId": "brand-07",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E5%AE%B6%E7%94%A8%E7%BA%BA%E7%BB%87",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-08-jd",
+      "brandId": "brand-08",
+      "platform": "jd",
+      "kind": "search",
+      "label": "京东品类搜索（演示）",
+      "url": "https://search.jd.com/Search?keyword=%E8%A1%A3%E7%89%A9%E6%8A%A4%E7%90%86",
+      "verifiedAt": "2026-09-18"
+    }
+  ],
+  "stores": [
+    {
+      "id": "brand-01-store",
+      "brandId": "brand-01",
+      "name": "演示门店 01",
+      "city": "杭州",
+      "address": "杭州市 · 示例商业街（虚构，不提供导航）",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-02-store",
+      "brandId": "brand-02",
+      "name": "演示门店 02",
+      "city": "上海",
+      "address": "上海市 · 示例商业街（虚构，不提供导航）",
+      "verifiedAt": "2026-09-18"
+    },
+    {
+      "id": "brand-03-store",
+      "brandId": "brand-03",
+      "name": "演示门店 03",
+      "city": "深圳",
+      "address": "深圳市 · 示例商业街（虚构，不提供导航）",
+      "verifiedAt": "2026-09-18"
+    }
+  ]
+}
