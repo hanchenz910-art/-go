@@ -31,20 +31,16 @@ PWA 离线缓存只在生产构建中启用。第一次在线打开并完成缓�
 - 本地名单导入、原签名导出、本地缓存、数据清除和更新记录。
 - Ed25519 验签、SHA-256 内容摘要、可信密钥用途校验、日期检查、过期提示、防止本机已见版本回退。
 - 从配置的 GitHub 数据仓库拉取 `releases/latest.sxlist.json`，与本地导入共用验签流程。
+- 可选自动更新：启用后在启动、网络恢复时检查，并在应用打开期间每 15 分钟检查；设置保存在本机。
 - 结构化补充企业、作息反馈、资料更正与企业异议；生成 GitHub Issue 预填链接或下载 Markdown 草稿。
 - 不内置 GitHub Token；点击前往 GitHub 只打开表单，由用户在 GitHub 最终确认发布。
 - 公开投稿提示、个人信息初步检测、来源约束和收录规则。
 
 ## 代码与数据分离
 
-建议独立建立两个 GitHub 仓库：
+当前代码和演示数据均发布在 [hanchenz910-art/-go](https://github.com/hanchenz910-art/-go)，默认从该仓库的 `main/releases/latest.sxlist.json` 更新。代码、结构化正文和签名文件按目录分离；需要时可以把数据迁至独立仓库，并在 App 的“数据与更新”页面切换。
 
-| 仓库 | 内容 |
-| --- | --- |
-| `rest-evidence-app` | 本仓库的客户端、Schema、公开验签密钥与签发工具 |
-| `weekend-data` | 经审核的公开事实、资料来源、待审核 Issues、签名名单 |
-
-App 的“数据与更新”页面配置第二个仓库。**配置一个仓库地址不代表信任它的密钥**；客户端只接受内置可信公钥签发的名单。
+**配置一个仓库地址不代表信任它的密钥**；客户端只接受内置可信公钥签发的名单。私钥只保存在维护者本地，不进入 GitHub 或客户端。
 
 示范数据和测试样本可随代码分发。真实资料不应写死在 App 中。私钥、私人举证材料、员工身份材料不能放进上述公开仓库。
 
@@ -82,6 +78,24 @@ npm run data:sign -- --input ../weekend-data/approved/dataset.json --key .local/
 
 生产签名工具只校验结构和密钥，不自动证明资料真实。人工核验仍然必需。
 
+## 虚构共建测试流程
+
+[Issue #1](https://github.com/hanchenz910-art/-go/issues/1) 是已提交的虚构工厂测试。`Demo contribution candidate` 工作流会在仓库所有者提交或编辑符合约束的虚构 Issue 时自动生成 `unsigned-demo-candidate` 附件。该附件没有签名，App 不会导入它。工作流只有读取代码的权限，且不接触签名私钥。
+
+生成和审核候选：
+
+```powershell
+node scripts/contribution.mjs --repo hanchenz910-art/-go --issue 1 --input tests/fixtures/demo-v2.sxlist.json --out .local/candidate.json
+```
+
+维护者核对 Issue 原文、候选内容及输出的 `bodySha256` 后，替换下方占位符进行本地签名：
+
+```powershell
+node scripts/contribution.mjs --repo hanchenz910-art/-go --issue 1 --input tests/fixtures/demo-v2.sxlist.json --out releases/latest.sxlist.json --approve <审核后的正文SHA256> --key .local/keys/demo-local-2026.pem --key-id demo-local-2026
+```
+
+已发布的演示 v3 在 v2 基础上增加一个虚构品牌、一个虚构工厂和一条待核实的作息记录，总计 9 个品牌、8 个办公室和 10 个工厂。原始 v1 仍随 App 内置；离线导入或在线更新可以升级到 v3。不得在同一版本号下重复签发不同内容，后续发布必须增加序号。本示例转换器固定以 v2 为基线，只用于这次独立演示，不是正式数据的自动审核系统。
+
 ## 测试
 
 ```powershell
@@ -91,7 +105,7 @@ npm run build
 npm run test:e2e
 ```
 
-自动化覆盖密码学边界、Schema、地点范围、平台链接、网络错误、隐私提示、完整导入流程、投稿预填链接和桌面 / 手机布局。GitHub 集成测试使用拦截的 HTTP 响应及表单页，**不会向真实 GitHub 提交 Issue 或推送数据**。
+自动化覆盖密码学边界、Schema、地点范围、平台链接、网络错误、隐私提示、完整导入流程、投稿预填链接、自动更新、虚构共建转换和桌面 / 手机布局。默认 GitHub 测试使用拦截的 HTTP 响应及表单页。设置 `LIVE_GITHUB=1` 后运行 `tests/e2e/release.spec.ts` 可额外验证真实仓库手动更新与启动自动更新；这些测试只读取远端文件，不会向 GitHub 提交 Issue 或推送数据。
 
 签名演示文件已随仓库保存，普通运行无需执行 `demo:build`。该维护命令需要本机已有演示私钥；克隆仓库不包含此私钥。正式签发不得复用演示密钥。
 
@@ -101,6 +115,6 @@ npm run test:e2e
 - [法律风险与运营约束](docs/LEGAL.md)
 - [图像来源](docs/ASSETS.md)
 
-当前没有配置真实 GitHub 数据仓库，没有真实企业名单，也没有正式运营主体、私密申诉受理渠道或法律审核结论。基础功能可本地验证；公开运营前须完成上述配置与审核。
+当前已配置 GitHub 演示数据仓库，没有真实企业名单，也没有正式运营主体、私密申诉受理渠道或法律审核结论。公开运营前须完成上述配置与审核。数字签名证明文件来源和完整性，不证明企业作息事实，也不能消除内容的法律风险。
 
 本项目尚未选定正式发布的开源许可证。参考项目的代码许可与第三方数据权利必须分别核对，不能将其他项目的名单视为已经核实的事实。
