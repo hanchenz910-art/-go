@@ -110,6 +110,32 @@ test("GitHub success and failure both preserve the trust boundary", async ({
   await expect(page.getByText("签名已验证 · v2")).toBeVisible();
 });
 
+test("automatic updates run when enabled and remain enabled after reload", async ({
+  page,
+}) => {
+  await openDirectory(page);
+  await configureGithub(page);
+  let requests = 0;
+  await page.route(
+    "https://raw.githubusercontent.com/example/weekend-data/main/releases/latest.sxlist.json",
+    (route) => {
+      requests += 1;
+      return route.fulfill({
+        status: 200,
+        body: updated,
+        contentType: "application/json",
+      });
+    },
+  );
+  await page.getByLabel("自动更新名单").check();
+  await expect(page.getByText("签名已验证 · v2")).toBeVisible();
+  expect(requests).toBe(1);
+  await page.reload();
+  await expect(page.getByLabel("自动更新名单")).toBeChecked();
+  await expect.poll(() => requests).toBe(2);
+  await expect(page.getByText("签名已验证 · v2")).toBeVisible();
+});
+
 test("scoped feedback opens a prefilled issue and never posts automatically", async ({
   page,
   context,
@@ -131,7 +157,7 @@ test("scoped feedback opens a prefilled issue and never posts automatically", as
   await page
     .getByLabel("公开来源链接")
     .fill("https://example.org/public-source");
-  await page.getByRole("checkbox").check();
+  await page.getByRole("checkbox", { name: /我已了解内容将公开/ }).check();
   let opened = "";
   let method = "";
   await context.route("https://github.com/**", (route) => {
