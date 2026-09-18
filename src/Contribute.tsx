@@ -134,6 +134,7 @@ export default function Contribute({
             <label>
               地点类型
               <select
+                aria-label="地点类型"
                 value={form.siteType}
                 onChange={(e) => change("siteType", e.target.value)}
               >
@@ -177,6 +178,7 @@ export default function Contribute({
             <label>
               用工类型
               <select
+                aria-label="用工类型"
                 value={form.employment}
                 onChange={(e) => change("employment", e.target.value)}
               >
@@ -195,6 +197,7 @@ export default function Contribute({
             <label className="span-two">
               作息安排
               <select
+                aria-label="作息安排"
                 value={form.schedule}
                 onChange={(e) => change("schedule", e.target.value)}
               >

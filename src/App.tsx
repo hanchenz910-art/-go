@@ -75,6 +75,10 @@ export default function App() {
   const stateRef = useRef(state);
   const bundleRef = useRef(bundle);
   const [busy, setBusy] = useState(true);
+  const [ready, setReady] = useState(false);
+  const [autoUpdate, setAutoUpdate] = useState(
+    () => loadPreference<boolean>("rest-evidence:auto-update", false) === true,
+  );
   const operation = useRef(false);
   const [offline, setOffline] = useState(!navigator.onLine);
   const [source, setSource] = useState<GithubSource>(() => {
@@ -137,7 +141,10 @@ export default function App() {
       } catch (error) {
         if (!cancelled) notify((error as Error).message, true);
       } finally {
-        if (!cancelled) setBusy(false);
+        if (!cancelled) {
+          setBusy(false);
+          setReady(true);
+        }
       }
     })();
     return () => {
@@ -206,6 +213,19 @@ export default function App() {
       if (!response.ok) throw new Error("演示名单不可用");
       await ingest(await response.text(), "内置演示", true);
     });
+  useEffect(() => {
+    if (!ready || !autoUpdate || !validSource(source)) return;
+    const check = () => {
+      if (navigator.onLine) update();
+    };
+    check();
+    const timer = setInterval(check, 15 * 60 * 1000);
+    window.addEventListener("online", check);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("online", check);
+    };
+  }, [ready, autoUpdate, source]);
   const contribute = (brand?: Brand, site?: Site) => {
     setDraft(
       brand
@@ -317,6 +337,25 @@ export default function App() {
             <strong>{nav.find((n) => n[0] === view)?.[1]}</strong>
           </div>
           <div className="topbar-actions">
+            <label style={{ fontSize: 12 }}>
+              <input
+                type="checkbox"
+                aria-label="自动更新名单"
+                checked={autoUpdate}
+                onChange={(e) => {
+                  try {
+                    localStorage.setItem(
+                      "rest-evidence:auto-update",
+                      JSON.stringify(e.target.checked),
+                    );
+                    setAutoUpdate(e.target.checked);
+                  } catch {
+                    notify("无法保存自动更新设置", true);
+                  }
+                }}
+              />{" "}
+              自动更新
+            </label>
             {offline && (
               <span className="offline-label">
                 <WifiOff size={15} />

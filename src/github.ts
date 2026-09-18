@@ -9,8 +9,8 @@ import {
 
 export type GithubSource = { owner: string; repo: string; branch: string };
 export const emptySource: GithubSource = {
-  owner: "",
-  repo: "",
+  owner: "hanchenz910-art",
+  repo: "-go",
   branch: "main",
 };
 export function validSource(source: GithubSource): boolean {
